@@ -1,79 +1,81 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import { useState } from "react";
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/material/Menu'
+import MenuIcon from '@mui/icons-material/Menu'
+import Container from '@mui/material/Container'
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
+import MenuItem from '@mui/material/MenuItem'
+import DragHandleIcon from '@mui/icons-material/DragHandle'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import { useState } from 'react'
 
-const pages = ["Products", "Benefit", "How it Works", "Pricing", "Company"];
-const productsDropItems = ["Item 1", "Item 2", "Item 3"];
-const companyDropItems = ["About Us", "Careers", "Our Mission"];
+const pages = ['Products', 'Benefit', 'How it Works', 'Pricing', 'Company']
+const mobileDropItems = [
+  'Products',
+  'Benefit',
+  'How it Works',
+  'Pricing',
+  'Company',
+  'Login',
+  'Get Demo',
+]
+const productsDropItems = ['Item 1', 'Item 2', 'Item 3']
+const companyDropItems = ['About Us', 'Careers', 'Our Mission']
 
 export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+    setAnchorElNav(event.currentTarget)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+    setAnchorElNav(null)
+  }
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position='static'>
+      <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant='h6'
             noWrap
-            component="a"
-            href="/"
+            component='a'
+            href='/'
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
             }}
           >
             Spend.In
           </Typography>
 
           <Typography
-            variant="h5"
+            variant='h5'
             noWrap
-            component="a"
-            href=""
+            component='a'
+            href=''
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
             }}
           >
             Spend.In
@@ -82,8 +84,8 @@ export default function Navbar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: { md: "center" },
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: { md: 'center' },
             }}
           >
             {pages.map((page) => (
@@ -92,13 +94,13 @@ export default function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
+                  color: 'white',
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
               >
                 {page}
-                {(page === "Products" || page === "Company") && (
+                {(page === 'Products' || page === 'Company') && (
                   <ExpandMoreIcon />
                 )}
               </Button>
@@ -107,50 +109,76 @@ export default function Navbar() {
           <Box
             sx={{
               flexGrow: 0,
-              display: { xs: "flex", md: "none" },
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
+            <Button
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              Login
+            </Button>
+            <Button
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              Get Demo
+            </Button>
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: { xs: 'flex', md: 'none' },
             }}
           >
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='inherit'
             >
               <DragHandleIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
+              id='menu-appbar'
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {mobileDropItems.map((page) => (
                 <MenuItem
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                  }}
+                  sx={{ display: 'flex', justifyContent: 'flex-end' }}
                 >
-                  {(page === "Products" || page === "Company") && (
-                    <KeyboardArrowLeftIcon />
-                  )}
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign='center' sx={{ display: 'flex' }}>
+                    {(page === 'Products' || page === 'Company') && (
+                      <KeyboardArrowLeftIcon />
+                    )}
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -158,7 +186,7 @@ export default function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+  )
 }
 
 {
