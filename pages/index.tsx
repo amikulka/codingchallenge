@@ -5,7 +5,7 @@ import Hero from '../components/hero/Hero'
 import Benefits from '../components/benefits/Benefits'
 import HowItWorks from '../components/howitworks/HowItWorks'
 import SuccessStories from '../components/success_stories/SuccessStories'
-import WhatTheySay from '../components/whattheysay/WhatTheySay'
+import Testimonials from '../components/testimonials/Testimonials'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +27,7 @@ export default function Home() {
         <Benefits />
         <HowItWorks />
         <SuccessStories />
-        <WhatTheySay />
+        <Testimonials />
       </main>
     </>
   )
