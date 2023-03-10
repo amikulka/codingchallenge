@@ -1,6 +1,9 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import { useState } from 'react'
 import BulletList from './BulletList'
+import posGraph from '../../public/with-spendin-graph.svg'
+import negGraph from '../../public/without-spendin-graph.svg'
+import Image from 'next/image'
 
 export default function SuccessStories() {
   const [withSpendView, setWithSpendView] = useState(true)
@@ -24,8 +27,13 @@ export default function SuccessStories() {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-          <Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+          }}
+        >
+          <Box sx={{ maxWidth: '550px', mr: '100px' }}>
             <div
               style={{
                 backgroundColor: 'lightgrey',
@@ -59,7 +67,13 @@ export default function SuccessStories() {
               <BulletList displayInformation={negDisplayInfo} />
             )}
           </Box>
-          <Box></Box>
+          <Box>
+            {withSpendView ? (
+              <Image src={posGraph} alt='positive business statistics' />
+            ) : (
+              <Image src={negGraph} alt='negative business statistics' />
+            )}
+          </Box>
         </Box>
       </Container>
     </>
