@@ -16,7 +16,7 @@ export default function BenefitCard({ cardInfo }: Props) {
       <div className='benefit-card-image'>
         <Image src={cardInfo.source} alt={cardInfo.header} />
       </div>
-      <Typography variant='h5'>{cardInfo.header}</Typography>
+      <Typography variant='h3'>{cardInfo.header}</Typography>
       <Typography variant='body1'>{cardInfo.body}</Typography>
     </>
   )

@@ -13,17 +13,19 @@ type Props = {
 
 export default function BulletList({ displayInformation }: Props) {
   return (
-    <Box>
-      <Typography variant='h5'>{displayInformation.header}</Typography>
+    <Box sx={{ mt: 4 }}>
+      <Typography variant='h4'>{displayInformation.header}</Typography>
       {displayInformation.bullets.map((bullet) => {
         return (
-          <Box key={bullet} sx={{ display: 'flex' }}>
+          <Box key={bullet} sx={{ display: 'flex', py: 3 }}>
             {displayInformation.isPositive ? (
               <Image src={posCheckIcon} alt='positive check icon' />
             ) : (
               <Image src={negXIcon} alt='negative x icon' />
             )}
-            <Typography variant='body1'>{bullet}</Typography>
+            <Typography variant='body2' sx={{ px: 2 }}>
+              {bullet}
+            </Typography>
           </Box>
         )
       })}

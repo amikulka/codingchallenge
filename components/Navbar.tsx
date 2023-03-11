@@ -40,25 +40,26 @@ export default function Navbar() {
   }
 
   return (
-    <AppBar position='static'>
+    <AppBar position='static' color='inherit'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Image src={logoIcon} alt='spend.in logo' />
           <Typography
-            variant='h6'
+            variant='h3'
             noWrap
             component='a'
             href='/'
             sx={{
               display: { xs: 'none', md: 'flex' },
               textDecoration: 'none',
+              pl: 2,
             }}
           >
             Spend.In
           </Typography>
 
           <Typography
-            variant='h5'
+            variant='h3'
             noWrap
             component='a'
             href=''
@@ -66,6 +67,7 @@ export default function Navbar() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               textDecoration: 'none',
+              pl: 2,
             }}
           >
             Spend.In
@@ -84,7 +86,7 @@ export default function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: 'white',
+                  color: '#040815',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -104,7 +106,7 @@ export default function Navbar() {
           >
             <Button
               sx={{
-                color: 'white',
+                color: '#040815',
                 display: 'flex',
                 alignItems: 'center',
               }}
@@ -112,10 +114,12 @@ export default function Navbar() {
               Login
             </Button>
             <Button
+              color='primary'
+              variant='contained'
               sx={{
-                color: 'white',
-                display: 'flex',
-                alignItems: 'center',
+                width: { xs: '80dvw', sm: 'auto', textTransform: 'unset' },
+                py: '.5rem',
+                borderRadius: '1.5rem',
               }}
             >
               Get Demo
@@ -160,7 +164,10 @@ export default function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{ display: 'flex', justifyContent: 'flex-end' }}
                 >
-                  <Typography textAlign='center' sx={{ display: 'flex' }}>
+                  <Typography
+                    textAlign='center'
+                    sx={{ display: 'flex', color: '#040815' }}
+                  >
                     {(page === 'Products' || page === 'Company') && (
                       <KeyboardArrowLeftIcon />
                     )}

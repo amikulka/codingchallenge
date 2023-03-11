@@ -27,9 +27,9 @@ export default function Benefits() {
     <>
       <Container
         maxWidth='xl'
-        sx={{ display: 'flex', flexDirection: 'column', mt: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column' }}
       >
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: { xs: 8, md: 12 } }}>
           <Box
             sx={{
               display: 'flex',
@@ -37,8 +37,8 @@ export default function Benefits() {
               mr: '160px',
             }}
           >
-            <Typography variant='h4'>WHY USE SPEND.IN</Typography>
-            <Typography variant='h3'>
+            <Typography variant='h5'>WHY USE SPEND.IN</Typography>
+            <Typography variant='h2' sx={{ mt: 2 }}>
               Easy, Simple, <br />
               Affordable
             </Typography>
@@ -48,6 +48,7 @@ export default function Benefits() {
               display: 'flex',
               alignItems: 'center',
               maxWidth: 450,
+              mt: 2,
             }}
           >
             <Typography variant='body1'>
@@ -62,13 +63,18 @@ export default function Benefits() {
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-around',
+            mt: { xs: 8, md: 12 },
           }}
         >
           {cardInfos.map((cardInfo) => {
             return (
-              <div key={cardInfo.header} className='benefit-card'>
+              <Box
+                key={cardInfo.header}
+                className='benefit-card'
+                sx={{ mb: 4 }}
+              >
                 <BenefitCard cardInfo={cardInfo} />
-              </div>
+              </Box>
             )
           })}
         </Box>

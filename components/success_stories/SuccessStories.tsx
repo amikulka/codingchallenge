@@ -21,8 +21,10 @@ export default function SuccessStories() {
               maxWidth: '600px',
             }}
           >
-            <Typography variant='h6'>INCREASE PRODUCTIVITY</Typography>
-            <Typography variant='h4'>
+            <Typography variant='h5' sx={{ mt: 8 }}>
+              INCREASE PRODUCTIVITY
+            </Typography>
+            <Typography variant='h2' sx={{ mt: 2 }}>
               Reduce Time in Doing Manual Work Managing Expenses
             </Typography>
           </Box>
@@ -31,6 +33,7 @@ export default function SuccessStories() {
           sx={{
             display: 'flex',
             flexWrap: 'wrap',
+            mt: { xs: 4, md: 8 },
           }}
         >
           <Box sx={{ maxWidth: '550px', mr: '100px' }}>
@@ -39,12 +42,17 @@ export default function SuccessStories() {
                 backgroundColor: 'lightgrey',
                 borderRadius: '2rem',
                 padding: 0,
-                width: '322px',
+                width: 'fit-content',
               }}
             >
               <Button
-                sx={{ mr: 1, py: '10px', pl: '20px' }}
-                className={withSpendView ? 'activeSpendButton' : ''}
+                variant={withSpendView ? 'contained' : 'clear'}
+                sx={{
+                  py: '10px',
+                  pl: '20px',
+                  borderRadius: '1.5rem',
+                  textTransform: 'none',
+                }}
                 onClick={() => {
                   if (!withSpendView) setWithSpendView(true)
                 }}
@@ -52,8 +60,13 @@ export default function SuccessStories() {
                 With Spend.In
               </Button>
               <Button
-                sx={{ ml: 1 }}
-                className={!withSpendView ? 'activeSpendButton' : ''}
+                variant={!withSpendView ? 'contained' : 'clear'}
+                sx={{
+                  py: '10px',
+                  pl: '20px',
+                  borderRadius: '1.5rem',
+                  textTransform: 'none',
+                }}
                 onClick={() => {
                   if (withSpendView) setWithSpendView(false)
                 }}
@@ -83,7 +96,7 @@ export default function SuccessStories() {
 const positiveDisplayInfo = {
   header: 'Track Business Expenses until its Milisecond',
   bullets: [
-    'Analyze your business cost easily with group transaction thorugh tagging feature.',
+    'Analyze your business cost easily with group transaction through tagging feature.',
     'Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.',
     'Arrange your business expenses by date, name, etc.,  with just one click.',
   ],

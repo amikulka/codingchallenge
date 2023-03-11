@@ -33,8 +33,8 @@ export default function Footer() {
           </Typography>
         </Box>
         <InformationLinks />
-        <div
-          style={{
+        <Box
+          sx={{
             width: '100%',
             border: '1px solid #CEBEFE',
             justifySelf: 'center',
