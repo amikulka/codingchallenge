@@ -8,6 +8,7 @@ import SuccessStories from '../components/success_stories/SuccessStories'
 import Testimonials from '../components/testimonials/Testimonials'
 import Pricing from '../components/pricing/Pricing'
 import CallToAction from '../components/calltoaction/CallToAction'
+import Footer from '../components/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,7 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <CallToAction />
+        <Footer />
       </main>
     </>
   )
