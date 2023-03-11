@@ -25,6 +25,8 @@
   border-radius: 2rem !important;
   background-color: blue !important;
 }
-.statistic-graph-container img {
+.statistic-graph-container img,
+.cta-image-container img {
   max-width: 90vw;
+  height: auto;
 }

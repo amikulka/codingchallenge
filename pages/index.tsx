@@ -7,6 +7,7 @@ import HowItWorks from '../components/howitworks/HowItWorks'
 import SuccessStories from '../components/success_stories/SuccessStories'
 import Testimonials from '../components/testimonials/Testimonials'
 import Pricing from '../components/pricing/Pricing'
+import CallToAction from '../components/calltoaction/CallToAction'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function Home() {
         <SuccessStories />
         <Testimonials />
         <Pricing />
+        <CallToAction />
       </main>
     </>
   )
