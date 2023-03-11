@@ -67,7 +67,7 @@ export default function SuccessStories() {
               <BulletList displayInformation={negDisplayInfo} />
             )}
           </Box>
-          <Box>
+          <Box className='statistic-graph-container'>
             {withSpendView ? (
               <Image src={posGraph} alt='positive business statistics' />
             ) : (

@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, CardContent, Typography } from '@mui/material'
+import { Box, Card, CardContent, Typography } from '@mui/material'
 import Image, { StaticImageData } from 'next/image'
 
 type Props = {

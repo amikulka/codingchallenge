@@ -25,3 +25,6 @@
   border-radius: 2rem !important;
   background-color: blue !important;
 }
+.statistic-graph-container img {
+  max-width: 90vw;
+}
