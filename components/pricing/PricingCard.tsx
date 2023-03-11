@@ -21,10 +21,9 @@ type BulletInfo = {
 
 export default function PricingCard({ pricingInfo }: Props) {
   return (
-    <Card>
+    <Card sx={{ flexShrink: 1, flexBasis: 325, maxWidth: 385, height: 710 }}>
       <CardContent
         sx={{
-          width: 385,
           height: 710,
           display: 'flex',
           flexDirection: 'column',
