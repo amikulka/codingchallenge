@@ -68,7 +68,7 @@ export default function Hero() {
             See Pricing
           </Button>
         </Box>
-        <Box className='dashboard-image'>
+        <Box className='dashboard-image' sx={{ mt: 4 }}>
           <Image src={dashboardImage} quality={100} alt='dashboard' />
         </Box>
       </Container>
