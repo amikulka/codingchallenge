@@ -7,7 +7,7 @@ export default function CallToAction() {
     <>
       <Container
         maxWidth='xl'
-        sx={{ display: 'flex', flexDirection: 'column', mt: 4 }}
+        sx={{ display: 'flex', flexDirection: 'column', mt: 8 }}
       >
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
           <Box
@@ -18,16 +18,27 @@ export default function CallToAction() {
               pr: '20px',
             }}
           >
-            <Typography variant='h6'>DOWNLOAD NOW!</Typography>
-            <Typography variant='h4'>
+            <Typography variant='h5'>DOWNLOAD NOW!</Typography>
+            <Typography variant='h2' sx={{ mt: 2 }}>
               Start tracking your business expenses today
             </Typography>
-            <Typography variant='body1'>
+            <Typography variant='body1' sx={{ mt: 2 }}>
               Are you ready to make your business more organized?
               <br />
               Download Spend.In now!
             </Typography>
-            <Button sx={{ maxWidth: 185 }}>Get A Free Demo</Button>
+            <Button
+              color='primary'
+              variant='contained'
+              sx={{
+                width: { xs: '80dvw', sm: '185px', textTransform: 'unset' },
+                py: '.5rem',
+                borderRadius: '1.5rem',
+                my: 4,
+              }}
+            >
+              Get a Free Demo
+            </Button>
           </Box>
           <Box className='cta-image-container'>
             <Image src={ctaImage} alt='call to action image' />

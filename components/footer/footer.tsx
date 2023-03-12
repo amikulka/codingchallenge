@@ -7,7 +7,7 @@ import PolicyLinks from './PolicyLinks'
 
 export default function Footer() {
   return (
-    <Container>
+    <Container sx={{ mt: 14 }}>
       <Box
         sx={{
           display: 'flex',
@@ -15,11 +15,11 @@ export default function Footer() {
           justifyContent: 'space-between',
         }}
       >
-        <Box sx={{ maxWidth: 425, flexGrow: 1, flexBasis: 375 }}>
-          <Box sx={{ display: 'flex' }}>
+        <Box sx={{ maxWidth: 400, flexGrow: 1, flexBasis: 350 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Image src={logoIcon} alt='spend.in logo' />
             <Typography
-              variant='h5'
+              variant='h4'
               noWrap
               sx={{
                 textDecoration: 'none',
@@ -28,7 +28,7 @@ export default function Footer() {
               Spend.In
             </Typography>
           </Box>
-          <Typography variant='body1' sx={{ pr: '20%' }}>
+          <Typography variant='body1' sx={{ pr: '30%', pt: 4, pb: 8 }}>
             Data visualization, and expense management for your business.
           </Typography>
         </Box>
@@ -38,7 +38,8 @@ export default function Footer() {
             width: '100%',
             border: '1px solid #CEBEFE',
             justifySelf: 'center',
-            margin: '30px 0',
+            mt: 10,
+            mb: 4,
           }}
         />
         <Box
@@ -48,6 +49,8 @@ export default function Footer() {
             flexWrap: { sm: 'wrap' },
             flexDirection: { xs: 'column', sm: 'row' },
             width: { xs: 'auto', sm: '100dvw' },
+            gap: { xs: 2 },
+            mb: 10,
           }}
         >
           <PolicyLinks />

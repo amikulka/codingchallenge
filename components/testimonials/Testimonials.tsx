@@ -16,12 +16,17 @@ export default function WhatTheySay() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: { sm: 'center' },
+          mt: { xs: 6, md: 10 },
         }}
       >
-        <Typography variant='h4'>WHAT THEY SAY</Typography>
-        <Typography variant='h3'>Our User Kind Words</Typography>
+        <Typography variant='h5' sx={{ mt: 2 }}>
+          WHAT THEY SAY
+        </Typography>
+        <Typography variant='h2' sx={{ mt: 1 }}>
+          Our User Kind Words
+        </Typography>
 
-        <Typography variant='body1'>
+        <Typography variant='body1' sx={{ mt: 2 }}>
           Here are some testimonials from our users after using Spend.In to
           manage their business expenses
         </Typography>
@@ -33,6 +38,7 @@ export default function WhatTheySay() {
           justifyContent: 'space-around',
           flexWrap: 'wrap',
           gap: '20px',
+          mt: 4,
         }}
       >
         {testimonials.map((testimonial) => {

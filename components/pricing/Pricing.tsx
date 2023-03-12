@@ -27,7 +27,7 @@ export default function Pricing() {
           <Switch defaultChecked />
           <Typography>Yearly</Typography>
         </Box>
-        <Chip label='Save 65%' />
+        <Chip label='Save 65%' variant='sale' size='small' />
       </Box>
 
       <Box

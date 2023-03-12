@@ -9,6 +9,7 @@ export default function PolicyLinks() {
         justifyContent: { sm: 'space-between' },
         flexBasis: { sm: 500 },
         flexDirection: { xs: 'column', sm: 'row' },
+        gap: { xs: 2, sm: 0 },
       }}
     >
       <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>

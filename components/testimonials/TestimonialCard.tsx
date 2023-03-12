@@ -15,10 +15,19 @@ export default function TestimonialCard({ testimonial }: Props) {
   return (
     <Card>
       <CardContent
-        sx={{ width: 385, display: 'flex', flexDirection: 'column' }}
+        sx={{
+          width: 385,
+          height: 365,
+          display: 'flex',
+          flexDirection: 'column',
+        }}
       >
-        <Typography variant='h6'>{testimonial.summary}</Typography>
-        <Typography variant='body1'>{testimonial.review}</Typography>
+        <Typography variant='h6' sx={{ mt: 1 }}>
+          {testimonial.summary}
+        </Typography>
+        <Typography variant='body2' sx={{ mt: 1, flexGrow: 1 }}>
+          {testimonial.review}
+        </Typography>
         <div
           style={{
             width: '70%',
@@ -26,15 +35,15 @@ export default function TestimonialCard({ testimonial }: Props) {
             alignSelf: 'center',
           }}
         />
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', mt: 4 }}>
           <Image
             src={testimonial.image}
             alt={testimonial.name}
             style={{ borderRadius: '10px' }}
           />
           <Box sx={{ alignSelf: 'center', ml: 2 }}>
-            <Typography>{testimonial.name}</Typography>
-            <Typography>{testimonial.position}</Typography>
+            <Typography variant='h6'>{testimonial.name}</Typography>
+            <Typography variant='caption'>{testimonial.position}</Typography>
           </Box>
         </Box>
       </CardContent>

@@ -27,42 +27,62 @@ export default function PricingCard({ pricingInfo }: Props) {
           height: 710,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-around',
         }}
       >
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', my: 1 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Image
               src={pricingInfo.tierIcon}
               alt={pricingInfo.tierName + ' icon'}
             />
-            <Typography>{pricingInfo.tierName}</Typography>
+            <Typography variant='h3'>{pricingInfo.tierName}</Typography>
           </Box>
-          {pricingInfo.tierName === 'Pro' && <Chip label='Popular' />}
+          {pricingInfo.tierName === 'Pro' && (
+            <Chip label='Popular' variant='popular' size='small' />
+          )}
         </Box>
-        <Typography>{pricingInfo.tierSlogan}</Typography>
-        <Box sx={{ display: 'flex', gap: '10px' }}>
-          <Typography>${pricingInfo.tierPrice}</Typography>
-          <Typography>/month</Typography>
+        <Typography variant='smallLight'>{pricingInfo.tierSlogan}</Typography>
+        <Box sx={{ display: 'flex', gap: '10px', alignItems: 'center', my: 2 }}>
+          <Typography variant='h3'>${pricingInfo.tierPrice}</Typography>
+          <Typography variant='caption'>/month</Typography>
         </Box>
-        {pricingInfo.tierBullets.map((bullet) => {
-          return (
-            <Box key={bullet.description} sx={{ display: 'flex', gap: '15px' }}>
-              <Image
-                src={bullet.isPositive ? greenCheckIcon : redXIcon}
-                alt={bullet.isPositive ? 'green check icon' : 'red x icon'}
-              />
-              <Typography>{bullet.description}</Typography>
-            </Box>
-          )
-        })}
-        <Button
+        <Typography variant='smallDark' sx={{ mb: 4 }}>
+          {pricingInfo.tierDescription}
+        </Typography>
+        <Box
           sx={{
-            backgroundColor: 'blue',
-            color: 'white',
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexGrow: 1,
+            flexDirection: 'column',
+          }}
+        >
+          {pricingInfo.tierBullets.map((bullet) => {
+            return (
+              <Box
+                key={bullet.description}
+                sx={{ display: 'flex', gap: '15px' }}
+              >
+                <Image
+                  src={bullet.isPositive ? greenCheckIcon : redXIcon}
+                  alt={bullet.isPositive ? 'green check icon' : 'red x icon'}
+                />
+                <Typography variant={bullet.isPositive ? 'body2' : 'body1'}>
+                  {bullet.description}
+                </Typography>
+              </Box>
+            )
+          })}
+        </Box>
+        <Button
+          variant='contained'
+          color='primary'
+          sx={{
             width: '80%',
             alignSelf: 'center',
             borderRadius: '2rem',
+            mt: 6,
+            mb: 2,
           }}
         >
           {pricingInfo.buttonText}

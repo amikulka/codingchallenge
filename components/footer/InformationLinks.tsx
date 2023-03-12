@@ -2,48 +2,56 @@ import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 export default function InformationLinks() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
       <Box
         sx={{
           width: 300,
           display: 'flex',
-          justifyContent: 'space-between',
+          gap: 8,
         }}
       >
-        <Box>
-          <Typography variant='h5'>Product</Typography>
-          <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Digital Invoice</Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <Typography variant='h6'>Product</Typography>
+          <Link
+            href={''}
+            style={{
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+          >
+            <Typography variant='smallLight'>Digital Invoice</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Insights</Typography>
+            <Typography variant='smallLight'>Insights</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Reimbursements</Typography>
+            <Typography variant='smallLight'>Reimbursements</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Virtual Assistant</Typography>
+            <Typography variant='smallLight'>Virtual Assistant</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Artificial Intelligence</Typography>
+            <Typography variant='smallLight'>
+              Artificial Intelligence
+            </Typography>
           </Link>
         </Box>
-        <Box>
-          <Typography variant='h5'>Company</Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <Typography variant='h6'>Company</Typography>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>About Us</Typography>
+            <Typography variant='smallLight'>About Us</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Newsletters</Typography>
+            <Typography variant='smallLight'>Newsletters</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Our Partners</Typography>
+            <Typography variant='smallLight'>Our Partners</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Career</Typography>
+            <Typography variant='smallLight'>Career</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Contact Us</Typography>
+            <Typography variant='smallLight'>Contact Us</Typography>
           </Link>
         </Box>
       </Box>
@@ -51,43 +59,43 @@ export default function InformationLinks() {
         sx={{
           width: 300,
           display: 'flex',
-          justifyContent: 'space-between',
+          gap: 10,
         }}
       >
-        <Box>
-          <Typography variant='h5'>Resources</Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <Typography variant='h6'>Resources</Typography>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Blog</Typography>
+            <Typography variant='smallLight'>Blog</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Pricing</Typography>
+            <Typography variant='smallLight'>Pricing</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>FAQ</Typography>
+            <Typography variant='smallLight'>FAQ</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Events</Typography>
+            <Typography variant='smallLight'>Events</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Ebook & Guide</Typography>
+            <Typography variant='smallLight'>Ebook & Guide</Typography>
           </Link>
         </Box>
-        <Box>
-          <Typography variant='h5'>Follow Us</Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <Typography variant='h6'>Follow Us</Typography>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>LinkedIn</Typography>
+            <Typography variant='smallLight'>LinkedIn</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Twitter</Typography>
+            <Typography variant='smallLight'>Twitter</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Instagram</Typography>
+            <Typography variant='smallLight'>Instagram</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>Facebook</Typography>
+            <Typography variant='smallLight'>Facebook</Typography>
           </Link>
           <Link href={''} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography>YouTube</Typography>
+            <Typography variant='smallLight'>YouTube</Typography>
           </Link>
         </Box>
       </Box>
