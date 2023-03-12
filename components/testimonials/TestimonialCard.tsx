@@ -16,7 +16,7 @@ export default function TestimonialCard({ testimonial }: Props) {
     <Card>
       <CardContent
         sx={{
-          width: 385,
+          width: { xs: 360, sm: 385 },
           height: 365,
           display: 'flex',
           flexDirection: 'column',

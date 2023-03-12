@@ -1,7 +1,8 @@
-import { Box, Button, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import hiw1Image from '../../public/HIW1.png'
 import hiw2Image from '../../public/HIW2.png'
 import hiw3Image from '../../public/HIW3.png'
+import CtaButtons from '../common/CtaButtons'
 import HIWCard from './HIWCard'
 
 const cardInfos = [
@@ -21,7 +22,7 @@ const cardInfos = [
 
 export default function HowItWorks() {
   return (
-    <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column' }}>
+    <>
       <Box
         sx={{
           display: 'flex',
@@ -62,41 +63,7 @@ export default function HowItWorks() {
           )
         })}
       </Box>
-      <Box
-        sx={{
-          mt: '40px',
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          gap: { xs: 1, sm: 2 },
-          justifyContent: 'center',
-        }}
-      >
-        <Button
-          color='primary'
-          variant='contained'
-          sx={{
-            width: { xs: '80dvw', sm: 'auto', textTransform: 'unset' },
-            py: '.5rem',
-            borderRadius: '1.5rem',
-          }}
-        >
-          Get a Free Demo
-        </Button>
-        <Button
-          variant='secondary'
-          sx={{
-            width: {
-              xs: '80dvw',
-              sm: 'auto',
-              textTransform: 'unset',
-            },
-            py: '.5rem',
-            borderRadius: '1.5rem',
-          }}
-        >
-          See Pricing
-        </Button>
-      </Box>
-    </Container>
+      <CtaButtons />
+    </>
   )
 }

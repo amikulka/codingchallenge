@@ -46,33 +46,18 @@ export default function Navbar() {
           <Image src={logoIcon} alt='spend.in logo' />
           <Typography
             variant='h3'
+            color='#3563E9'
             noWrap
             component='a'
             href='/'
             sx={{
-              display: { xs: 'none', md: 'flex' },
+              display: 'flex',
               textDecoration: 'none',
               pl: 2,
             }}
           >
             Spend.In
           </Typography>
-
-          <Typography
-            variant='h3'
-            noWrap
-            component='a'
-            href=''
-            sx={{
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              textDecoration: 'none',
-              pl: 2,
-            }}
-          >
-            Spend.In
-          </Typography>
-
           <Box
             sx={{
               flexGrow: 1,
@@ -84,11 +69,13 @@ export default function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
+                size='large'
                 sx={{
                   my: 2,
                   color: '#040815',
                   display: 'flex',
                   alignItems: 'center',
+                  textTransform: 'none',
                 }}
               >
                 {page}
@@ -102,6 +89,7 @@ export default function Navbar() {
             sx={{
               flexGrow: 0,
               display: { xs: 'none', md: 'flex' },
+              gap: 2,
             }}
           >
             <Button

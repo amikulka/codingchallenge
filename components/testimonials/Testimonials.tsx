@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { StaticImageData } from 'next/image'
 import TestimonialCard from './TestimonialCard'
 import JimmyImage from '../../public/jimmy-profile.png'
@@ -7,10 +7,7 @@ import MoritikaImage from '../../public/moritika-profile.png'
 
 export default function WhatTheySay() {
   return (
-    <Container
-      maxWidth='xl'
-      sx={{ display: 'flex', flexDirection: 'column', mt: 4 }}
-    >
+    <>
       <Box
         sx={{
           display: 'flex',
@@ -47,7 +44,7 @@ export default function WhatTheySay() {
           )
         })}
       </Box>
-    </Container>
+    </>
   )
 }
 

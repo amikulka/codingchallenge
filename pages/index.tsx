@@ -9,6 +9,7 @@ import Testimonials from '../components/testimonials/Testimonials'
 import Pricing from '../components/pricing/Pricing'
 import CallToAction from '../components/calltoaction/CallToAction'
 import Footer from '../components/footer/Footer'
+import { Container } from '@mui/material'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,14 +27,24 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <Hero />
-        <Benefits />
-        <HowItWorks />
-        <SuccessStories />
-        <Testimonials />
-        <Pricing />
-        <CallToAction />
-        <Footer />
+        <Container
+          maxWidth='xl'
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+            px: 5,
+          }}
+        >
+          <Hero />
+          <Benefits />
+          <HowItWorks />
+          <SuccessStories />
+          <Testimonials />
+          <Pricing />
+          <CallToAction />
+          <Footer />
+        </Container>
       </main>
     </>
   )

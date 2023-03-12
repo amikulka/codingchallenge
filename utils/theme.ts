@@ -100,28 +100,6 @@ theme = createTheme(theme, {
             color: theme.palette.secondary[400],
           },
         },
-        {
-          props: { variant: 'main' },
-          style: {
-            boxShadow: 'none',
-            textTransform: 'none',
-            fontSize: '12px',
-            fontWeight: 600,
-            padding: '5px 16px',
-            lineHeight: '160%',
-            backgroundColor: '#7C5CFC',
-            color: '#FFFFFF',
-            '&:hover': {
-              backgroundColor: '#5E43D89',
-            },
-            '&:active': {
-              backgroundColor: '#432EB5',
-            },
-            '&:focus': {
-              boxShadow: '#7C5CFC',
-            },
-          },
-        },
       ],
     },
     MuiChip: {
@@ -257,15 +235,6 @@ theme.typography.body2 = {
   color: '#040815',
   [theme.breakpoints.up('md')]: {
     fontSize: '1.1rem',
-  },
-}
-theme.typography.caption = {
-  fontFamily: 'Plus Jakarta Sans',
-  fontWeight: 400,
-  fontsize: '.7rem',
-  color: '#596780',
-  [theme.breakpoints.up('md')]: {
-    fontSize: '.9rem',
   },
 }
 

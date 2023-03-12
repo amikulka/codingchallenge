@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import automaticImage from '../../public/automatic-invoice.png'
 import clearImage from '../../public/clear-payment-history.png'
 import multiCardImage from '../../public/use-multi-card-payment.png'
@@ -25,60 +25,51 @@ const cardInfos = [
 export default function Benefits() {
   return (
     <>
-      <Container
-        maxWidth='xl'
-        sx={{ display: 'flex', flexDirection: 'column' }}
-      >
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: { xs: 8, md: 12 } }}>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              mr: '160px',
-            }}
-          >
-            <Typography variant='h5'>WHY USE SPEND.IN</Typography>
-            <Typography variant='h2' sx={{ mt: 2 }}>
-              Easy, Simple, <br />
-              Affordable
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              maxWidth: 450,
-              mt: 2,
-            }}
-          >
-            <Typography variant='body1'>
-              Our platform helps your business in managing expenses. these are
-              some of the reasons why you should use our platform in managing
-              business finances.
-            </Typography>
-          </Box>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: { xs: 8, md: 12 } }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            mr: '160px',
+          }}
+        >
+          <Typography variant='h5'>WHY USE SPEND.IN</Typography>
+          <Typography variant='h2' sx={{ mt: 2 }}>
+            Easy, Simple, <br />
+            Affordable
+          </Typography>
         </Box>
         <Box
           sx={{
             display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            mt: { xs: 8, md: 12 },
+            alignItems: 'center',
+            maxWidth: 450,
+            mt: 2,
           }}
         >
-          {cardInfos.map((cardInfo) => {
-            return (
-              <Box
-                key={cardInfo.header}
-                className='benefit-card'
-                sx={{ mb: 4 }}
-              >
-                <BenefitCard cardInfo={cardInfo} />
-              </Box>
-            )
-          })}
+          <Typography variant='body1'>
+            Our platform helps your business in managing expenses. these are
+            some of the reasons why you should use our platform in managing
+            business finances.
+          </Typography>
         </Box>
-      </Container>
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-around',
+          mt: { xs: 8, md: 12 },
+        }}
+      >
+        {cardInfos.map((cardInfo) => {
+          return (
+            <Box key={cardInfo.header} className='benefit-card' sx={{ mb: 4 }}>
+              <BenefitCard cardInfo={cardInfo} />
+            </Box>
+          )
+        })}
+      </Box>
     </>
   )
 }

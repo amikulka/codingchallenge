@@ -2,7 +2,14 @@ import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 export default function InformationLinks() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 6,
+        justifyContent: 'center',
+      }}
+    >
       <Box
         sx={{
           width: 300,
@@ -10,7 +17,13 @@ export default function InformationLinks() {
           gap: 8,
         }}
       >
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 4,
+          }}
+        >
           <Typography variant='h6'>Product</Typography>
           <Link
             href={''}

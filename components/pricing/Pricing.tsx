@@ -1,4 +1,4 @@
-import { Box, Chip, Container, Switch, Typography } from '@mui/material'
+import { Box, Chip, Switch, Typography } from '@mui/material'
 import freeIcon from '../../public/lovely.svg'
 import proIcon from '../../public/crown.svg'
 import ultimateIcon from '../../public/flash.svg'
@@ -6,15 +6,13 @@ import PricingCard from './PricingCard'
 
 export default function Pricing() {
   return (
-    <Container
-      maxWidth='xl'
-      sx={{ display: 'flex', flexDirection: 'column', mt: 4 }}
-    >
+    <>
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          mt: 4,
         }}
       >
         <Typography variant='h3'>Ready to get Started?</Typography>
@@ -44,7 +42,7 @@ export default function Pricing() {
           )
         })}
       </Box>
-    </Container>
+    </>
   )
 }
 

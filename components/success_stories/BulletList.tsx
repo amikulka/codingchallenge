@@ -13,7 +13,7 @@ type Props = {
 
 export default function BulletList({ displayInformation }: Props) {
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box sx={{ mt: 4, maxWidth: 500 }}>
       <Typography variant='h4'>{displayInformation.header}</Typography>
       {displayInformation.bullets.map((bullet) => {
         return (
