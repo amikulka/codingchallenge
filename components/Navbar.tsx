@@ -29,7 +29,6 @@ const companyDropItems = ['About Us', 'Careers', 'Our Mission']
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget)
@@ -51,9 +50,24 @@ export default function Navbar() {
             component='a'
             href='/'
             sx={{
-              display: 'flex',
+              display: { xs: 'none', md: 'flex' },
               textDecoration: 'none',
               pl: 2,
+            }}
+          >
+            Spend.In
+          </Typography>
+          <Typography
+            variant='h3'
+            color='#3563E9'
+            noWrap
+            component='a'
+            href='/'
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              textDecoration: 'none',
+              pl: 2,
+              flexGrow: 1,
             }}
           >
             Spend.In
