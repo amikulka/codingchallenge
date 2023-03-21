@@ -5,7 +5,6 @@ export default function PolicyLinks() {
     <Box
       sx={{
         display: 'flex',
-
         justifyContent: { sm: 'space-between' },
         flexBasis: { sm: 500 },
         flexDirection: { xs: 'column', sm: 'row' },

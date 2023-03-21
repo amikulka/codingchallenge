@@ -17,7 +17,9 @@ export default function BenefitCard({ cardInfo }: Props) {
         <Image src={cardInfo.source} alt={cardInfo.header} />
       </div>
       <Typography variant='h3'>{cardInfo.header}</Typography>
-      <Typography variant='body1'>{cardInfo.body}</Typography>
+      <Typography variant='body1' sx={{ maxWidth: '90%' }}>
+        {cardInfo.body}
+      </Typography>
     </>
   )
 }

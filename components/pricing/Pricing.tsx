@@ -12,12 +12,12 @@ export default function Pricing() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          mt: 4,
+          my: 4,
         }}
       >
-        <Typography variant='h3'>Ready to get Started?</Typography>
+        <Typography variant='h2'>Ready to get Started?</Typography>
 
-        <Typography variant='body1'>
+        <Typography variant='body1' sx={{ my: 2 }}>
           Choose a plan that suits your business needs
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>

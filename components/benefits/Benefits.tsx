@@ -59,6 +59,7 @@ export default function Benefits() {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'space-around',
+
           mt: { xs: 8, md: 12 },
         }}
       >

@@ -10,7 +10,7 @@ export default function Footer() {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         mt: 14,
       }}
     >
@@ -59,7 +59,7 @@ export default function Footer() {
           justifyContent: 'space-between',
           flexWrap: { sm: 'wrap' },
           flexDirection: { xs: 'column', sm: 'row' },
-          width: { xs: 'auto', sm: '100dvw' },
+          width: { xs: 'auto', sm: '90dvw' },
           gap: { xs: 2 },
           px: 2,
           mb: 10,
